@@ -1,0 +1,65 @@
+---
+title: "FAIRness of COVID-19 medical data"
+author:
+  - Eero Raittio^[Institute of Dentistry, University of Eastern Finland, Kuopio, Finland.; eero.raittio@uef.fi]
+  - Ahmad Sofi-Mahmudi^[Seqiz Health Network, Kurdistan University of Medical Sciences, Seqiz, Iran.; a.sofimahmudi@gmail.com]
+  - Sergio E. Uribe*^[Department of Conservative Dentistry and Oral Health & Bioinformatics Research Unit, Riga Stradins University, Riga, Latvia.; sergio.uribe@rsu.lv]
+format: html
+editor: visual
+bibliography: references.bib
+csl: vancouver.csl
+---
+
+**Corresponding author:** Sergio E. Uribe; Address: ; Telephone: ; Email: .
+
+**Authors' contributions:** All authors conceived and designed, and wrote and revised the protocol.
+
+# Abstract
+
+**Objective and aim:**
+
+**Methods:**
+
+**Discussion:**
+
+***Keywords:***
+
+# Aims
+
+# Methods
+
+## Data sources and study selection
+
+We will search for open access COVID-19-related articles from medical journals available in the Europe PMC database. We will restrict our search to papers in English. We will consider papers published from 2020-01-01 to 2021-12-31 with variants of COVID-19 keyword in their title, keywords, or results. We will download all identified records in XML full-text format (for full-text evaluation) and in CSV format (for descriptive tabulations) from the database. The search query will be as follows:
+
+(COVID-19 query for title, keywords, and results) AND (SRC:"MED") AND (LANG:"eng" OR LANG:"en" OR LANG:"us") AND (FIRST_PDATE:\[2020-01-01 TO 2021-12-31\]) AND ((IN_EPMC:y) OR (OPEN_ACCESS:y)) AND (PUB_TYPE:"Journal Article" OR PUB_TYPE:"research-article" OR PUB_TYPE:"rapid-communication" OR PUB_TYPE:"product-review")'
+
+The COVID-19 query is available in the *covid_keywords.csv* file.
+
+## Data extraction and synthesis
+
+We aim to describe the use of five transparency indicators:
+
+-   data availability,
+
+-   code availability,
+
+-   conflicts of interest disclosures,
+
+-   funding disclosures,
+
+-   statements of protocol registration.
+
+To do so, we will use a validated and automated tool developed by Serghiou et al. [@serghiou2021] to extract the indicators from open access articles downloaded from the Europe PMC database.
+
+Basic journal- and article-related information (publisher, publication year and journal name) will be retrieved from the Europe PMC database. We will download additional information about journal impact factors from the Journal Citation Reports.
+
+We will use R [@R-base] for searches, data handling, analysis and reporting. The searches and data export from the Europe PMC will be conducted with the europepmc package [@europepmc]. Transparency indicators from the available full-texts will be extracted with the rtransparent package [@rtransparent]. Trends over time in transparency indicators by journal- and article-related information will be reported using descriptive tabulations and graphical illustrations, for instance using the ggplot2 package [@ggplot2].
+
+The protocol of this study will be published beforehand on the Open Science Framework website (OSF, osf.io).
+
+# Limitations
+
+The study sample will be restricted to open access articles in the Europe PMC database which may not correspond to all COVID-19-related studies published in medical journals. However, as the majority of COVID-19-related papers are open access, this will not diminish the strength of our interpretations considerably.
+
+# References
