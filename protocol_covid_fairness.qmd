@@ -38,6 +38,7 @@ We will search for open access COVID-19-related articles from medical journals a
 
 The COVID-19 query is available in the *covid_keywords.csv* file.
 
+<<<<<<< HEAD
 ## Data analysis
 
 Then, COVI19 research data shared via the repositories will be analyzed to verify compliance with FAIR principles using the FAIRsFAIR Data Object Assessment Metrics[@Devaraju2020-yu].
@@ -45,6 +46,17 @@ Then, COVI19 research data shared via the repositories will be analyzed to verif
 We will perform descriptive analyses to generate tables and graphs to evaluate compliance with FAIR principles. Additionally, we will perform sub-analyses to detect differences between journals, research areas and time periods.
 
 # Limitations
+=======
+## Data extraction and synthesis
+
+First, from all those articles, we will identify articles which shared data. 
+
+To do so, we will use a validated and automated tool developed by Serghiou et al. [@serghiou2021] to detect studies that shared data from open access articles downloaded from the Europe PMC database. Then, we will manually confirm that articles actually shared their data and then extract link or DOI to the data.
+
+Then adherence of shared data to FAIR-principles will be evaluated using automated and validated F-UJI tool.
+
+Basic journal- and article-related information (publisher, publication year and journal name) will be retrieved from the Europe PMC database. We will download additional information about journal impact factors from the Journal Citation Reports.
+>>>>>>> 9add9417b2582281013963cac7a1598cdca3a99e
 
 The study sample will be restricted to open access articles in the Europe PMC database which may not correspond to all COVID-19-related studies published in medical journals. However, as the majority of COVID-19-related papers are open access, hence we hope to obtain an estimation of the quality of the available data on COVID19.
 
@@ -54,4 +66,4 @@ SUE acknowledges financial support from the European Union's Horizon 2020 resear
 
 \
 
-# References
+# Referencesd
