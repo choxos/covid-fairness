@@ -59,7 +59,7 @@
 <p class="author">Ahmad Sofi-Mahmudi<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p class="author">Sergio E. Uribe*<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 </header>
-<p><strong>Corresponding author:</strong> Sergio E. Uribe; Address: ; Telephone: ; Email: .</p>
+<p><strong>Corresponding author:</strong> Sergio E. Uribe; Address: Dcirziema iela 20, Riga, Latvia; Email: sergio.uribe@rsu.lv.</p>
 <p><strong>Authors’ contributions:</strong> All authors conceived and designed, and wrote and revised the protocol.</p>
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
@@ -79,16 +79,21 @@
 <p>We will search for open access COVID-19-related articles from medical journals available in the Europe PMC database. We will restrict our search to papers in English. We will consider papers published from 2020-01-01 to 2021-12-31 with variants of COVID-19 keyword in their title, keywords, or results. We will download all identified records in XML full-text format (for full-text evaluation) and in CSV format (for descriptive tabulations) from the database. The search query will be as follows:</p>
 <p>(COVID-19 query for title, keywords, and results) AND (SRC:“MED”) AND (LANG:“eng” OR LANG:“en” OR LANG:“us”) AND (FIRST_PDATE:[2020-01-01 TO 2021-12-31]) AND ((IN_EPMC:y) OR (OPEN_ACCESS:y)) AND (PUB_TYPE:“Journal Article” OR PUB_TYPE:“research-article” OR PUB_TYPE:“rapid-communication” OR PUB_TYPE:“product-review”)’</p>
 <p>The COVID-19 query is available in the <em>covid_keywords.csv</em> file.</p>
-</section>
-<section id="data-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis">Data analysis</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Data analysis</p>
 <p>Then, COVI19 research data shared via the repositories will be analyzed to verify compliance with FAIR principles using the FAIRsFAIR Data Object Assessment Metrics<span class="citation" data-cites="Devaraju2020-yu">(<a href="#ref-Devaraju2020-yu" role="doc-biblioref">4</a>)</span>.</p>
 <p>We will perform descriptive analyses to generate tables and graphs to evaluate compliance with FAIR principles. Additionally, we will perform sub-analyses to detect differences between journals, research areas and time periods.</p>
 </section>
 </section>
 <section id="limitations" class="level1">
-<h1>Limitations</h1>
+<h1># Limitations</h1>
+<section id="data-extraction-and-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="data-extraction-and-synthesis">Data extraction and synthesis</h2>
+<p>First, from all those articles, we will identify articles which shared data.</p>
+<p>To do so, we will use a validated and automated tool developed by Serghiou et al. <span class="citation" data-cites="serghiou2021">(<a href="#ref-serghiou2021" role="doc-biblioref"><strong>serghiou2021?</strong></a>)</span> to detect studies that shared data from open access articles downloaded from the Europe PMC database. Then, we will manually confirm that articles actually shared their data and then extract link or DOI to the data.</p>
+<p>Then adherence of shared data to FAIR-principles will be evaluated using automated and validated F-UJI tool.</p>
+<p>Basic journal- and article-related information (publisher, publication year and journal name) will be retrieved from the Europe PMC database. We will download additional information about journal impact factors from the Journal Citation Reports.</p>
 <p>The study sample will be restricted to open access articles in the Europe PMC database which may not correspond to all COVID-19-related studies published in medical journals. However, as the majority of COVID-19-related papers are open access, hence we hope to obtain an estimation of the quality of the available data on COVID19.</p>
+</section>
 <section id="funding" class="level2">
 <h2 class="anchored" data-anchor-id="funding">Funding</h2>
 <p>SUE acknowledges financial support from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 857287 and the Uzņēmuma MikroTik līgumam Nr. UL8, 2021 RSU.</p>
@@ -96,8 +101,8 @@
 </p>
 </section>
 </section>
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
+<section id="referencesd" class="level1 unnumbered">
+<h1 class="unnumbered">Referencesd</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-Wilkinson2016-bo" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">Wilkinson MD, Dumontier M, Aalbersberg IJJ, Appleton G, Axton M, Baak A, et al. The <span>FAIR</span> guiding principles for scientific data management and stewardship. Scientific data [Internet]. 2016 Mar;3:160018. Available from: <a href="http://dx.doi.org/10.1038/sdata.2016.18">http://dx.doi.org/10.1038/sdata.2016.18</a></div>

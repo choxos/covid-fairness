@@ -10,7 +10,7 @@ bibliography: references.bib
 csl: vancouver.csl
 ---
 
-**Corresponding author:** Sergio E. Uribe; Address: ; Telephone: ; Email: .
+**Corresponding author:** Sergio E. Uribe; Address: Dcirziema iela 20, Riga, Latvia; Email: sergio.uribe@rsu.lv.
 
 **Authors' contributions:** All authors conceived and designed, and wrote and revised the protocol.
 
@@ -56,7 +56,7 @@ To do so, we will use a validated and automated tool developed by Serghiou et al
 Then adherence of shared data to FAIR-principles will be evaluated using automated and validated F-UJI tool.
 
 Basic journal- and article-related information (publisher, publication year and journal name) will be retrieved from the Europe PMC database. We will download additional information about journal impact factors from the Journal Citation Reports.
->>>>>>> 9add9417b2582281013963cac7a1598cdca3a99e
+
 
 The study sample will be restricted to open access articles in the Europe PMC database which may not correspond to all COVID-19-related studies published in medical journals. However, as the majority of COVID-19-related papers are open access, hence we hope to obtain an estimation of the quality of the available data on COVID19.
 
