@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Eero Raittio">
+  <meta name="author" content="Ahmad Sofi-Mahmudi">
+  <meta name="author" content="Sergio E. Uribe* ">
+  <title>FAIRness of COVID-19 medical data</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+
+  <script src="protocol_covid_fairness_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="protocol_covid_fairness_files/libs/quarto-html/quarto.js"></script>
+  <script src="protocol_covid_fairness_files/libs/quarto-html/popper.min.js"></script>
+  <script src="protocol_covid_fairness_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="protocol_covid_fairness_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="protocol_covid_fairness_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="protocol_covid_fairness_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="protocol_covid_fairness_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="protocol_covid_fairness_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="protocol_covid_fairness_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header">
+<h1 class="title display-7">FAIRness of COVID-19 medical data</h1>
+<p class="author">Eero Raittio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p class="author">Ahmad Sofi-Mahmudi<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p class="author">Sergio E. Uribe*<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</header>
+<p><strong>Corresponding author:</strong> Sergio E. Uribe; Address: Dcirziema iela 20, Riga, Latvia; Email: sergio.uribe@rsu.lv.</p>
+<p><strong>Authors’ contributions:</strong> All authors conceived and designed, and wrote and revised the protocol.</p>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p><strong>Objective and aim:</strong> Access to research data increases confidence in research results by other researchers, the public, and policy and decision makers. A data management and dissemination framework was developed with guidelines to make data findable, accessible, interoperable and reusable, the FAIR principles<span class="citation" data-cites="Wilkinson2016-bo">(<a href="#ref-Wilkinson2016-bo" role="doc-biblioref">1</a>)</span>. Our aim is to evaluate the amount of data available from COVID19 research and to assess compliance with the FAIR principles.</p>
+<p><strong>Methods:</strong> Descriptive study. We adhere to the recommendations for reporting STROBE descriptive studies<span class="citation" data-cites="Von_Elm2007-th">(<a href="#ref-Von_Elm2007-th" role="doc-biblioref">2</a>)</span>. We will search for all articles about COVID19 available in the EuroPMC database published between January 2020 and December 2021. We will extract information from available research data, either as supplementary material to the publication or available in an external repository. We will then evaluate the FAIR metrics of each repository using the tool F-UJI - An Automated FAIR Data Assessment Tool<span class="citation" data-cites="Devaraju_undated-ex">(<a href="#ref-Devaraju_undated-ex" role="doc-biblioref">3</a>)</span>.</p>
+<p><strong>Discussion:</strong> We hope to obtain an estimate of the availability of research data associated with COVI19 publications and adherence to FAIR principles. We hope that this information will contribute to the discussion about what measures can be taken to improve the confidence of the public and policy makers in the results of scientific research.</p>
+<p><strong><em>Keywords:</em></strong> FAIR principles, Research data, Data Repositories, Research Methods, Open data, Open research</p>
+</section>
+<section id="aims" class="level1">
+<h1>Aims</h1>
+<p>To evaluate the amount of data available from COVID19 research and to assess compliance with the FAIR principles</p>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="data-sources-and-study-selection" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources-and-study-selection">Data sources and study selection</h2>
+<p>We will search for open access COVID-19-related articles from medical journals available in the Europe PMC database. We will restrict our search to papers in English. We will consider papers published from 2020-01-01 to 2021-12-31 with variants of COVID-19 keyword in their title, keywords, or results. We will download all identified records in XML full-text format (for full-text evaluation) and in CSV format (for descriptive tabulations) from the database. The search query will be as follows:</p>
+<p>(COVID-19 query for title, keywords, and results) AND (SRC:“MED”) AND (LANG:“eng” OR LANG:“en” OR LANG:“us”) AND (FIRST_PDATE:[2020-01-01 TO 2021-12-31]) AND ((IN_EPMC:y) OR (OPEN_ACCESS:y)) AND (PUB_TYPE:“Journal Article” OR PUB_TYPE:“research-article” OR PUB_TYPE:“rapid-communication” OR PUB_TYPE:“product-review”)’</p>
+<p>The COVID-19 query is available in the <em>covid_keywords.csv</em> file.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Data analysis</p>
+<p>Then, COVI19 research data shared via the repositories will be analyzed to verify compliance with FAIR principles using the FAIRsFAIR Data Object Assessment Metrics<span class="citation" data-cites="Devaraju2020-yu">(<a href="#ref-Devaraju2020-yu" role="doc-biblioref">4</a>)</span>.</p>
+<p>We will perform descriptive analyses to generate tables and graphs to evaluate compliance with FAIR principles. Additionally, we will perform sub-analyses to detect differences between journals, research areas and time periods.</p>
+</section>
+</section>
+<section id="limitations" class="level1">
+<h1># Limitations</h1>
+<section id="data-extraction-and-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="data-extraction-and-synthesis">Data extraction and synthesis</h2>
+<p>First, from all those articles, we will identify articles which shared data.</p>
+<p>To do so, we will use a validated and automated tool developed by Serghiou et al. <span class="citation" data-cites="serghiou2021">(<a href="#ref-serghiou2021" role="doc-biblioref"><strong>serghiou2021?</strong></a>)</span> to detect studies that shared data from open access articles downloaded from the Europe PMC database. Then, we will manually confirm that articles actually shared their data and then extract link or DOI to the data.</p>
+<p>Then adherence of shared data to FAIR-principles will be evaluated using automated and validated F-UJI tool.</p>
+<p>Basic journal- and article-related information (publisher, publication year and journal name) will be retrieved from the Europe PMC database. We will download additional information about journal impact factors from the Journal Citation Reports.</p>
+<p>The study sample will be restricted to open access articles in the Europe PMC database which may not correspond to all COVID-19-related studies published in medical journals. However, as the majority of COVID-19-related papers are open access, hence we hope to obtain an estimation of the quality of the available data on COVID19.</p>
+</section>
+<section id="funding" class="level2">
+<h2 class="anchored" data-anchor-id="funding">Funding</h2>
+<p>SUE acknowledges financial support from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 857287 and the Uzņēmuma MikroTik līgumam Nr. UL8, 2021 RSU.</p>
+<p><br>
+</p>
+</section>
+</section>
+<section id="referencesd" class="level1 unnumbered">
+<h1 class="unnumbered">Referencesd</h1>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-Wilkinson2016-bo" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Wilkinson MD, Dumontier M, Aalbersberg IJJ, Appleton G, Axton M, Baak A, et al. The <span>FAIR</span> guiding principles for scientific data management and stewardship. Scientific data [Internet]. 2016 Mar;3:160018. Available from: <a href="http://dx.doi.org/10.1038/sdata.2016.18">http://dx.doi.org/10.1038/sdata.2016.18</a></div>
+</div>
+<div id="ref-Von_Elm2007-th" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Elm E von, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP, et al. The strengthening the reporting of observational studies in epidemiology (<span>STROBE</span>) statement: Guidelines for reporting observational studies. Annals of internal medicine [Internet]. 2007 Oct;147(8):573–7. Available from: <a href="https://www.ncbi.nlm.nih.gov/pubmed/17938396">https://www.ncbi.nlm.nih.gov/pubmed/17938396</a></div>
+</div>
+<div id="ref-Devaraju_undated-ex" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Devaraju A, Huber R. <span>F-UJI</span> - an automated <span>FAIR</span> data assessment tool [Internet]. Github; Available from: <a href="https://github.com/kitchenprinzessin3880/fuji/releases/tag/v1.0.0">https://github.com/kitchenprinzessin3880/fuji/releases/tag/v1.0.0</a></div>
+</div>
+<div id="ref-Devaraju2020-yu" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Devaraju A, Huber R, Mokrane M, Herterich P, Cepinskas L, Vries J de, et al. <span>FAIRsFAIR</span> data object assessment metrics [Internet]. 2020. Available from: <a href="https://zenodo.org/record/4081213">https://zenodo.org/record/4081213</a></div>
+</div>
+</div>
+</section>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>Institute of Dentistry, University of Eastern Finland, Kuopio, Finland.; eero.raittio@uef.fi<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Seqiz Health Network, Kurdistan University of Medical Sciences, Seqiz, Iran.; a.sofimahmudi@gmail.com<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Department of Conservative Dentistry and Oral Health &amp; Bioinformatics Research Unit, Riga Stradins University, Riga, Latvia.; sergio.uribe@rsu.lv<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>School of Dentistry, Universidad Austral de Chile, Valdivia, Chile<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>
